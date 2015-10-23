@@ -1,0 +1,12 @@
+package:
+    name:           php-merchant-epayments
+    namespace:      hiqdev\php\merchant\epayments
+    title:          ePayments plugin for PHP merchant library
+    type:           library
+    keywords:       php, epayments, merchant
+    description:    |
+        [ePayments](https://epayments.com/) plugin for [PHP merchant library](https://github.com/hiqdev/php-merchant).
+
+require:
+    hiqdev/hidev-config:        "*"
+    hiqdev/hidev-config-php:    "*"
