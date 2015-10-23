@@ -6,7 +6,7 @@
  * @link      https://github.com/hiqdev/php-merchant-epayments
  * @package   php-merchant-epayments
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
 namespace hiqdev\php\merchant\epayments;
@@ -34,15 +34,15 @@ class Merchant extends \hiqdev\php\merchant\Merchant
     public function getInputs()
     {
         return [
-            'Amount'                => $this->total,
-            'Details'               => $this->description,
-            'Currency'              => $this->currency,
-            'PartnerId'             => $this->purse,
-            'LifeTime'              => $this->lifetime,
-            'SuccessUrl'            => $this->successUrl,
-            'DeclineUrl'            => $this->failureUrl,
-            'OrderId'               => $this->orderId,
-            'Sign'                  => $this->sign,
+            'Amount'     => $this->total,
+            'Details'    => $this->description,
+            'Currency'   => $this->currency,
+            'PartnerId'  => $this->purse,
+            'LifeTime'   => $this->lifetime,
+            'SuccessUrl' => $this->successUrl,
+            'DeclineUrl' => $this->failureUrl,
+            'OrderId'    => $this->orderId,
+            'Sign'       => $this->sign,
         ];
     }
 
