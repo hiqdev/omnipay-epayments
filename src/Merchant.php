@@ -14,7 +14,7 @@ namespace hiqdev\php\merchant\epayments;
 class Merchant extends \hiqdev\php\merchant\Merchant
 {
     protected static $_defaults = [
-        'name'        => 'epayments',
+        'system'      => 'epayments',
         'label'       => 'ePayments',
         'actionUrl'   => 'https://api.sandbox.epayments.com/merchant/prepare',
         'confirmText' => 'OK',
