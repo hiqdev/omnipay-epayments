@@ -28,7 +28,7 @@ class Merchant extends \hiqdev\php\merchant\Merchant
 
     public function getSign()
     {
-        return md5("{$this->purse};{$this->secret};{$this->orderId};{$this->sum};{$this->currency}");
+        return md5("{$this->purse};{$this->_secret};{$this->orderId};{$this->sum};{$this->currency}");
     }
 
     public function getInputs()
