@@ -12,5 +12,5 @@ package:
         This package implements [ePayments](https://epayments.com/) support for Omnipay.
 
 require:
-    hiqdev/hidev-config:        "*"
-    hiqdev/hidev-config-php:    "*"
+    hiqdev/hidev-hiqdev: "*"
+    hiqdev/hidev-php:    "*"
