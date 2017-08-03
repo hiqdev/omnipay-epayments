@@ -1,15 +1,17 @@
-Omnipay: ePayments
-==================
+# Omnipay: ePayments
 
 **ePayments driver for Omnipay payment processing library**
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-epayments/v/stable)](https://packagist.org/packages/hiqdev/omnipay-epayments)
 [![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-epayments/downloads)](https://packagist.org/packages/hiqdev/omnipay-epayments)
 [![Build Status](https://img.shields.io/travis/hiqdev/omnipay-epayments.svg)](https://travis-ci.org/hiqdev/omnipay-epayments)
+[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/hiqdev/omnipay-epayments.svg)](https://scrutinizer-ci.com/g/hiqdev/omnipay-epayments/)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/omnipay-epayments.svg)](https://scrutinizer-ci.com/g/hiqdev/omnipay-epayments/)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:omnipay-epayments/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:omnipay-epayments/dev-master)
 
 [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+.
+
 This package implements [ePayments](https://epayments.com/) support for Omnipay.
 
 ## Installation
@@ -56,4 +58,4 @@ or better yet, fork the library and submit a pull request.
 This project is released under the terms of the MIT [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/mit).
 
-Copyright © 2015, HiQDev (http://hiqdev.com/)
+Copyright © 2015-2017, HiQDev (http://hiqdev.com/)

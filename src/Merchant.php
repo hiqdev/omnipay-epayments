@@ -1,12 +1,11 @@
 <?php
-
-/*
+/**
  * ePayments driver for Omnipay payment processing library
  *
  * @link      https://github.com/hiqdev/omnipay-epayments
  * @package   omnipay-epayments
  * @license   MIT
- * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace hiqdev\php\merchant\epayments;
