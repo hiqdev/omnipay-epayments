@@ -13,7 +13,7 @@ class CompletePurchaseRequest extends AbstractRequest
     {
         $this->validate('secret');
 
-        return $this->httpRequest->query->all();
+        return $this->httpRequest->request->all();
     }
 
     public function sendData($data)

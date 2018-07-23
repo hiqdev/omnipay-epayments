@@ -48,19 +48,4 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         return $this->setParameter('orderId', $value);
     }
-
-    public function createSignature()
-    {
-        $this->validate('partnerId', 'secret', 'orderId', 'amount', 'currency');
-
-        $parts = [
-            $this->getPartnerId(),
-            $this->getSecret(),
-            $this->getOrderId(),
-            $this->getAmount(),
-            $this->getCurrency(),
-        ];
-
-        return md5(implode(';', $parts));
-    }
 }

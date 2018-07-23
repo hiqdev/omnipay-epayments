@@ -73,7 +73,7 @@ class DetailsResponse extends AbstractResponse
 
     public function getCurrency(): string
     {
-        return strtoupper($this->data['string']);
+        return strtoupper($this->data['currency']);
     }
 
     public function getPaymentDate(): \DateTime
@@ -86,7 +86,7 @@ class DetailsResponse extends AbstractResponse
 
     public function getTransactionReference(): string
     {
-        return $this->data['purseTransactionId'];
+        return $this->data['paymentTransactionId'];
     }
 
     public function getTransactionId(): string

@@ -50,17 +50,14 @@ class CompletePurchaseResponse extends AbstractResponse
         }
     }
 
-    public function createSignature()
+    private function createSignature(): string
     {
-        $parts = [
+        return md5(implode(';', [
             $this->getOrderId(),
             $this->getTransactionReference(),
-            $this->getRequest()->getSecret(),
-        ];
-
-        return md5(implode(';', $parts));
+            $this->getRequest()->getSecret()
+        ]));
     }
-
 
     private function getSign(): ?string
     {

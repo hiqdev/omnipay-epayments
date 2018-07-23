@@ -57,17 +57,17 @@ class AuthenticateRequest extends AbstractRequest
                     'Content-type' => 'application/x-www-form-urlencoded',
                 ],
                 $requestBody
-            );
+            )->send();
 
             $responseBody = (string) $httpResponse->getBody();
             $response = json_decode($responseBody, true) ?? [];
 
             return new AuthenticateResponse($this, $response);
         } catch (\Exception $e) {
-            throw new InvalidResponseException(
-                'Error communicating with payment gateway: ' . $e->getMessage(),
-                $e->getCode()
-            );
+            throw new InvalidResponseException(sprintf(
+                'Error communicating with payment gateway: %s',
+                $e->getMessage()
+            ));
         }
     }
 
