@@ -30,21 +30,6 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('NickName', $value);
     }
 
-    public function createSignature()
-    {
-        $this->validate('partnerId', 'secret', 'orderId', 'amount', 'currency');
-
-        $parts = [
-            $this->getPartnerId(),
-            $this->getSecret(),
-            $this->getOrderId(),
-            $this->getAmount(),
-            $this->getCurrency(),
-        ];
-
-        return md5(implode(';', $parts));
-    }
-
     public function getData()
     {
         $this->validate('partnerId', 'secret', 'orderId', 'amount', 'currency', 'details');
