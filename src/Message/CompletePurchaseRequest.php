@@ -2,7 +2,6 @@
 
 namespace Omnipay\ePayments\Message;
 
-
 /**
  * Class CompletePurchaseRequest
  *

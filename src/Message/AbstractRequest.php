@@ -29,6 +29,16 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('secret', $value);
     }
 
+    public function getTransactionId()
+    {
+        return $this->getParameter('orderId');
+    }
+
+    public function setTransactionId($value)
+    {
+        return $this->setParameter('orderId', $value);
+    }
+
     public function getOrderId()
     {
         return $this->getParameter('orderId');

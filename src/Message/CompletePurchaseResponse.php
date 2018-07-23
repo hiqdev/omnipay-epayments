@@ -42,13 +42,25 @@ class CompletePurchaseResponse extends AbstractResponse
             ));
         }
 
-        if ($this->getSign() !== $this->getRequest()->createSignature()) {
+        if ($this->getSign() !== $this->createSignature()) {
             throw new InvalidResponseException(sprintf(
                 'Failed to validate signature for order "%s"',
                 $this->getOrderId()
             ));
         }
     }
+
+    public function createSignature()
+    {
+        $parts = [
+            $this->getOrderId(),
+            $this->getTransactionReference(),
+            $this->getRequest()->getSecret(),
+        ];
+
+        return md5(implode(';', $parts));
+    }
+
 
     private function getSign(): ?string
     {
