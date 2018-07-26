@@ -61,7 +61,11 @@ class CompletePurchaseResponse extends AbstractResponse
 
     private function getSign(): ?string
     {
-        return $this->data['sign'] ?? null;
+        if (isset($this->data['sign'])) {
+            return strtolower($this->data['sign']);
+        }
+
+        return null;
     }
 
     public function getMessage()

@@ -22,9 +22,9 @@ class DetailsRequest extends AbstractRequest
         return $this->parameters->get('access_token');
     }
 
-    public function getEndpoint(int $paymentId): string
+    public function getEndpoint(string $orderId): string
     {
-        return 'https://api.epayments.com/v1/merchant/orders/' . $paymentId;
+        return 'https://api.epayments.com/v1/merchant/orders/' . $orderId;
     }
 
     public function getData()
@@ -47,15 +47,14 @@ class DetailsRequest extends AbstractRequest
         try {
             $requestBody = http_build_query($data);
 
-            $httpResponse = $this->httpClient->post(
+            $httpResponse = $this->httpClient->get(
                 $this->getEndpoint($this->getOrderId()),
                 [
                     'Accept' => 'application/json',
-                    'Content-type' => 'application/json',
                     'Authorization' => 'Bearer ' . $this->getAccessToken(),
                 ],
                 $requestBody
-            );
+            )->send();
 
             $responseBody = (string) $httpResponse->getBody();
             $response = json_decode($responseBody, true) ?? [];
