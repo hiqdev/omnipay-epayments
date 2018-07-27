@@ -1,10 +1,18 @@
-hiqdev/omnipay-epayments changelog
-----------------------------------
+## [Under development]
 
-## Under development
+## [1.0] - 2018-07-27
 
-- Changed: redone to `omnipay-epayments`
-- Added basics
+- Implemented ePayments merchant ([@SilverFire], [@hiqsol])
 
-## Development started 2015-10-23
+## [Development started] - 2015-10-23
 
+[@hiqsol]: https://github.com/hiqsol
+[sol@hiqdev.com]: https://github.com/hiqsol
+[@SilverFire]: https://github.com/SilverFire
+[d.naumenko.a@gmail.com]: https://github.com/SilverFire
+[@tafid]: https://github.com/tafid
+[andreyklochok@gmail.com]: https://github.com/tafid
+[@BladeRoot]: https://github.com/BladeRoot
+[bladeroot@gmail.com]: https://github.com/BladeRoot
+[Under development]: https://github.com/hiqdev/omnipay-epayments/releases
+[1.0]: https://github.com/hiqdev/omnipay-epayments/releases/tag/1.0
