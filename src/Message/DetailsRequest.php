@@ -47,23 +47,25 @@ class DetailsRequest extends AbstractRequest
         try {
             $requestBody = http_build_query($data);
 
-            $httpResponse = $this->httpClient->get(
+            $httpResponse = $this->httpClient->request(
+                'GET',
                 $this->getEndpoint($this->getOrderId()),
                 [
                     'Accept' => 'application/json',
                     'Authorization' => 'Bearer ' . $this->getAccessToken(),
                 ],
                 $requestBody
-            )->send();
+            );
 
-            $responseBody = (string) $httpResponse->getBody();
-            $response = json_decode($responseBody, true) ?? [];
+            $responseBody = (string) $httpResponse->getBody()->getContents();
+            $response = json_decode($responseBody, true, 512, JSON_THROW_ON_ERROR) ?? [];
 
             return new DetailsResponse($this, $response);
         } catch (\Exception $e) {
             throw new InvalidResponseException(
                 'Error communicating with payment gateway: ' . $e->getMessage(),
-                $e->getCode()
+                $e->getCode(),
+                $e
             );
         }
     }

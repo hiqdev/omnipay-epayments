@@ -1,8 +1,5 @@
-## [Under development]
 
 ## [1.0] - 2018-07-27
-
-- Implemented ePayments merchant ([@SilverFire], [@hiqsol])
 
 ## [Development started] - 2015-10-23
 
@@ -14,5 +11,4 @@
 [andreyklochok@gmail.com]: https://github.com/tafid
 [@BladeRoot]: https://github.com/BladeRoot
 [bladeroot@gmail.com]: https://github.com/BladeRoot
-[Under development]: https://github.com/hiqdev/omnipay-epayments/releases
 [1.0]: https://github.com/hiqdev/omnipay-epayments/releases/tag/1.0

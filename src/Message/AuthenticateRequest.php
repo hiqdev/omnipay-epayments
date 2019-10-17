@@ -50,24 +50,25 @@ class AuthenticateRequest extends AbstractRequest
         try {
             $requestBody = http_build_query($data);
 
-            $httpResponse = $this->httpClient->post(
+            $httpResponse = $this->httpClient->request(
+                'POST',
                 $this->getEndpoint(),
                 [
                     'Accept' => 'application/json',
                     'Content-type' => 'application/x-www-form-urlencoded',
                 ],
                 $requestBody
-            )->send();
+            );
 
-            $responseBody = (string) $httpResponse->getBody();
-            $response = json_decode($responseBody, true) ?? [];
+            $responseBody = (string) $httpResponse->getBody()->getContents();
+            $response = json_decode($responseBody, true, 512, JSON_THROW_ON_ERROR) ?? [];
 
             return new AuthenticateResponse($this, $response);
         } catch (\Exception $e) {
             throw new InvalidResponseException(sprintf(
                 'Error communicating with payment gateway: %s',
                 $e->getMessage()
-            ));
+            ), $e->getCode(), $e);
         }
     }
 

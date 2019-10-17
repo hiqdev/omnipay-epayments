@@ -2,9 +2,13 @@
 
 namespace Omnipay\ePayments\Message;
 
+use Countable;
+use DateTime;
+use DateTimeZone;
 use Omnipay\Common\Exception\InvalidResponseException;
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
+use function count;
 
 /**
  * Class DetailsResponse
@@ -48,10 +52,10 @@ class DetailsResponse extends AbstractResponse
             ));
         }
 
-        if (\count($data['orders']) !== 1) {
+        if ((is_array($data['orders']) || $data['orders'] instanceof Countable ? count($data['orders']) : 0) !== 1) {
             throw new InvalidResponseException(sprintf(
                 'Expected to get exactly 1 order, got %s instead',
-                \count($data['orders'])
+                is_array($data['orders']) || $data['orders'] instanceof Countable ? count($data['orders']) : 0
             ));
         }
     }
@@ -76,10 +80,10 @@ class DetailsResponse extends AbstractResponse
         return strtoupper($this->data['currency']);
     }
 
-    public function getPaymentDate(): \DateTime
+    public function getPaymentDate(): DateTime
     {
-        $dateTime = new \DateTime($this->data['payDate']);
-        $dateTime->setTimezone(new \DateTimeZone('UTC'));
+        $dateTime = new DateTime($this->data['payDate']);
+        $dateTime->setTimezone(new DateTimeZone('UTC'));
 
         return $dateTime;
     }
