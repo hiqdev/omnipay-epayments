@@ -1,3 +1,9 @@
+## [3.0.0] - 2019-10-17
+
+## [Under development]
+
+- Update to Omnipay v3
+    - [12223db] 2019-10-17 Update to Omnipay v3 [@SilverFire]
 
 ## [1.0] - 2018-07-27
 
@@ -43,3 +49,7 @@
 [3ab6f25]: https://github.com/hiqdev/omnipay-epayments/commit/3ab6f25
 [80291d6]: https://github.com/hiqdev/omnipay-epayments/commit/80291d6
 [1.0]: https://github.com/hiqdev/omnipay-epayments/releases/tag/1.0
+[12223db]: https://github.com/hiqdev/omnipay-epayments/commit/12223db
+[3.0.0]: https://github.com/hiqdev/omnipay-epayments/releases/tag/3.0.0
+[Development started]: https://github.com/hiqdev/omnipay-epayments/compare/1.0...Development started
+[Under development]: https://github.com/hiqdev/omnipay-epayments/compare/1.0...HEAD
