@@ -25,6 +25,8 @@
 
 ## [Development started] - 2015-10-23
 
+## [3.0.0] - 2019-10-17
+
 [@hiqsol]: https://github.com/hiqsol
 [sol@hiqdev.com]: https://github.com/hiqsol
 [@SilverFire]: https://github.com/SilverFire
